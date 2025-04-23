@@ -6,7 +6,7 @@ WORKDIR /user/src/app
 # package.json 복사해오기 
 COPY package*.json ./
 
-# pnpm-lock.ymal
+# pnpm-lock.yaml
 COPY pnpm-lock.yaml ./
 
 # pnpm 설치하기

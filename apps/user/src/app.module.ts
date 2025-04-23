@@ -12,6 +12,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       validationSchema: Joi.object({
         HTTP_PORT: Joi.number().required(),
         DB_URL: Joi.string().required(),
+        TCP_PORT: Joi.number().required(),
+        ACCESS_TOKEN_SECRET: Joi.string().required(),
+        REFRESH_TOKEN_SECRET: Joi.string().required(),
       }),
     }),
     TypeOrmModule.forRootAsync({
