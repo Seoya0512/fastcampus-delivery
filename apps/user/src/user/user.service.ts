@@ -13,7 +13,6 @@ export class UserService {
   ) {}
   async create(createUserDto: CreateUserDto) {
     const { email, password } = createUserDto;
-    console.log('createUserDto', createUserDto);
 
     const user = await this.userRepository.findOne({
       where: {

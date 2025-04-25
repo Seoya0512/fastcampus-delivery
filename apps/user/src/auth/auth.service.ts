@@ -22,8 +22,8 @@ export class AuthService {
     private readonly jwtService: JwtService,
   ) {}
 
-  async register(rawToken: string, registerDto: RegisterDto) {
-    const { email, password } = this.parseBasicToken(rawToken);
+  async register(registerDto: RegisterDto) {
+    const { email, password } = this.parseBasicToken(registerDto.token);
 
     return this.userService.create({
       ...registerDto,
